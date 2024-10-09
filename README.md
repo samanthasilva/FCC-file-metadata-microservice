@@ -22,13 +22,15 @@ Este é um projeto de **microserviço de metadados de arquivo**, que faz parte d
 O usuário faz o upload de um arquivo através do formulário presente na página inicial.
 
 A API responde com um JSON contendo as seguintes informações:
-
-```json
+```yaml
 {
   "name": "example.jpg",
   "type": "image/jpeg",
   "size": 1024
 }
+```
+
+
 
 ## Rotas
 

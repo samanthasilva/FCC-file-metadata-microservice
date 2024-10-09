@@ -28,7 +28,7 @@ A API responde com um JSON contendo as seguintes informações:
   "name": "example.jpg",
   "type": "image/jpeg",
   "size": 1024
-}´´´
+}
 
 ## Rotas
 

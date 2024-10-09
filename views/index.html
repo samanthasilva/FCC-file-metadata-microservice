@@ -1,34 +1,63 @@
 <!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metadados de Arquivo</title>
+    <link
+      rel="shortcut icon"
+      href="https://cdn-icons-png.flaticon.com/512/1029/1029183.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="/public/style.css" rel="stylesheet" type="text/css" />
+  </head>
 
-<html>
-   <head>
-      <title>File Metadata</title>
-      <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-      <link href="/public/style.css" rel="stylesheet" type="text/css">
-   </head>
+  <body>
+    <div class="view">
+      <h1>Projeto API: Microserviço de Metadados de Arquivo</h1>
+      <p>Por favor, faça o upload de um arquivo.</p>
 
-   <body>
-      <div class="container">
-        <h1>API Project: File Metadata Microservice</h1>
+      <h3 id="output"></h3>
+      <form
+        id="fileForm"
+        enctype="multipart/form-data"
+        method="POST"
+        action="/api/fileanalyse"
+      >
+        <label for="inputfield" class="custom-file-upload">
+          Escolher Ficheiro:
+        </label>
+        <span id="file-chosen">Nenhum ficheiro selecionado</span>
+        <input id="inputfield" type="file" name="upfile" style="display: none;" />
+        <input id="button" type="submit" value="Fazer Upload" />
+      </form>
+    </div>
 
-        <h2>Usage:</h2>
-        <p>
-          Please Upload a File ...
-        </p>
-        <div class="view">
-          <h3 id="output"></h3>
-          <form enctype="multipart/form-data" method="POST" action="/api/fileanalyse">
-            <input id="inputfield" type="file" name="upfile">
-            <input id="button" type="submit" value="Upload">
-          </form>
-        </div>
-      </div>
-      <div class="footer">
-        <p>
-          by 
-          <a href="http://www.freecodecamp.com">freeCodeCamp</a>
-        </p>
-      </div>
-   </body>
+    <footer class="cute-footer">
+      <p>
+        Desenvolvido
+        <a
+          href="https://github.com/samanthasilva/FCC-file-metadata-microservice"
+          target="_blank"
+          class="heart-link"
+          >❤</a
+        >
+        por Samantha Silva
+      </p>
+    </footer>
+
+    <script>
+      const inputField = document.getElementById('inputfield');
+      const fileChosen = document.getElementById('file-chosen');
+
+      inputField.addEventListener('change', function () {
+        fileChosen.textContent = this.files[0].name;
+      });
+    </script>
+  </body>
 </html>

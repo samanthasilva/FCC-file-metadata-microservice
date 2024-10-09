@@ -1,11 +1,17 @@
 /****** Main Styling ******/
 
+html {
+  height: 100%;
+  background:#f8f6f6f3;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  color: #222;
-  background-color: #ECF0F1;
-  text-align: center;
+  font-family: Montserrat, sans-serif;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
 }
 
 .container {
@@ -13,30 +19,178 @@ body {
   margin-top: 40px;
 }
 
-.footer {
-  margin-top: 60px;
+p {
+  margin-top: 50px;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 1px;
+
+
 }
 
-a {
-  color: #2574A9;
+/* Titles */
+h1 {
+  font-size: 18px;
+  color: #2C3E50;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: montserrat, arial, verdana;
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 16px;
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-family: montserrat, arial, verdana;
+
 }
 
 input {
   display: block;
   position: relative;
   margin: 10px auto;
+  padding: 15px;
+  border: 0px solid #ffffff;
+  border-radius: 0px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2C3E50;
+  font-size: 13px;
+}
+
+/* Botão personalizado para input file */
+.custom-file-upload {
+  display: inline-block;
+  padding: 10px 25px;
+  cursor: pointer;
+  color: #383838;
+  background-color: #f1f1f1;
+  border: 0 none;
+  border-radius: 25px;
+  font-weight: normal;
+  text-align: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+
+}
+
+/* Estilização do span para exibir o nome do ficheiro */
+#file-chosen {
+  font-size: 11px;
+  margin-left: 8px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  border-bottom: 1px solid #ee0979;
+  padding: 15px;
+  border-radius: 0px;
+  margin-bottom: 10px;
+  font-family: montserrat;
+  text-align: left;
+  color: #ee0979;
+  
+}
+
+#button {
+  background-color: #ee0979;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 40px;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+
+  
+}
+
+#button:hover {
+  background-color: #d90f6a;
 }
 
 input#button {
   width: 230px;
+  background: #ee0979;
+  font-weight: bold;
+  color: #fff;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 5px;
 }
 
 .view {
-  position:relative;
-  margin: auto;
-  margin-top: 40px;
-  border: 1px  solid  #aaa;
+    background: white;
+    border: 0 none;
+    border-radius: 6px;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    margin: 0 4% 0 2%;
+    position: relative;
+    margin-top: 35px !important;
+    width: 100%;
+    max-width: 1200px;
+    min-width: 1000px;
+    text-align: center;
+    margin: 30px;
+}
+
+footer {
+  font-family: montserrat, arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+  border-top: 2px solid #d90f6a;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); 
+  font-weight: normal;
+  position: relative;
+  text-align: center;
+  position: fixed;
+  text-align: center;
+  margin-top: 20px;
   padding: 20px;
-  width: 60%;
-  min-width: 400px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  z-index: 10;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  z-index: 100; 
+  list-style-type: none;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.cute-footer p {
+  margin: 5px 0;
+  font-size: 10px;
+}
+
+.cute-footer a {
+  color: #d90f6a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cute-footer .heart-link {
+  color: #d90f6a; 
+  font-size: 18px;
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+.cute-footer .heart-link:hover {
+  transform: scale(1.2); 
 }
